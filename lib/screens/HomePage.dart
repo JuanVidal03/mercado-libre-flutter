@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       
       appBar: AppBar(
+        leading: null,
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
         title: Padding(
@@ -21,7 +22,6 @@ class HomePage extends StatelessWidget {
               Text("Mercado Libre"),
               ElevatedButton(
                 onPressed: () {
-                  print('Hola');
                   Navigator.pushNamed(context, '/register');
                 },
                 child: Text('Cerrar Sesion'),
@@ -29,8 +29,8 @@ class HomePage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  backgroundColor: Color(0xFF008204),
-                  foregroundColor: Colors.black,
+                  backgroundColor: Colors.blue[700],
+                  foregroundColor: Colors.white,
                 ),
               )
             ],
@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
                         Icon(
                           categories[index]['icono'],
                           size: 40.0,
-                          color: Color(0xFF008204),
+                          color: Colors.blue[700],
                         ),
                         SizedBox(height: 5.0),
                         Text(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tienda_flutter/screens/HomePage.dart';
+import 'package:tienda_flutter/screens/Login.dart';
 import 'package:tienda_flutter/screens/RegisterUsers.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -22,6 +23,7 @@ class _HomeRouteState extends State<HomeRoute> {
       routes: {
         '/register': (context) => RegisterUsers(),
         '/inicio': (context) => HomePage(),
+        '/login': (context) => Login(),
       },
     );
   }

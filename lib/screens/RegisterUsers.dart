@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, unused_field
 
 import 'package:flutter/material.dart';
 // components
@@ -12,6 +12,9 @@ class RegisterUsers extends StatefulWidget {
 }
 
 class _RegisterUsersState extends State<RegisterUsers> {
+
+  final _formRegisterKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +31,7 @@ class _RegisterUsersState extends State<RegisterUsers> {
                   height: 100,
                 ),
                 SizedBox(height: 10),
-                Text('Registrate Ahora!',
+                Text('Te estabamos esperando!',
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -52,13 +55,30 @@ class _RegisterUsersState extends State<RegisterUsers> {
                   Icon(Icons.lock_open_sharp),
                   true
                 ),
+                SizedBox(height: 10),
+                fieldText(
+                  "Confirmar Contraseña",
+                  Icon(Icons.lock_open_sharp),
+                  true
+                ),
                 SizedBox(height: 20,),
 
                 SizedBox(
                   width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        /*
+                        if (_formRegisterKey.currentState!.validate()) {
+                          _formRegisterKey.currentState!
+                            .save();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text("Registro Existoso!", style: TextStyle(color: Colors.red),)),
+                          );
+                        } */
+
+                        Navigator.pushNamed(context, '/login');
+                      },
                       child: Text('Registrarse'),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
@@ -69,7 +89,7 @@ class _RegisterUsersState extends State<RegisterUsers> {
                   children: [
                   Text('¿Tienes una cuenta?', style: TextStyle(color: Colors.white),), 
                   TextButton(onPressed: () {
-                    Navigator.pushNamed(context, '/inicio');
+                    Navigator.pushNamed(context, '/login');
                   },
                     child: Text(
                       'iniciar sesion', style: TextStyle(color: Colors.blue),
