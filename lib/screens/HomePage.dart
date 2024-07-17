@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       
       appBar: AppBar(
-        leading: null,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
         title: Padding(
@@ -66,13 +66,21 @@ class HomePage extends StatelessWidget {
                     icon: Icon(
                       Icons.favorite_border_rounded,
                       color: Colors.white,
-                    )),
+                )),
                 IconButton(
                     onPressed: () {},
                     icon: Icon(
                       Icons.notification_add_outlined,
                       color: Colors.white,
-                    )),
+                )),
+                IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/profile");
+                    },
+                    icon: Icon(
+                      Icons.person_outlined,
+                      color: Colors.white,
+                )),
               ],
             ),
             SizedBox(

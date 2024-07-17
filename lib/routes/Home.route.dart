@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tienda_flutter/screens/HomePage.dart';
 import 'package:tienda_flutter/screens/Login.dart';
+import 'package:tienda_flutter/screens/Profile.dart';
 import 'package:tienda_flutter/screens/RegisterUsers.dart';
 
 class HomeRoute extends StatefulWidget {
@@ -14,7 +15,7 @@ class _HomeRouteState extends State<HomeRoute> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: Login(),
       theme: ThemeData(
         primaryColor: Color(0xFF1e1e1e),
         scaffoldBackgroundColor: Color(0xFF1e1e1e),
@@ -24,6 +25,7 @@ class _HomeRouteState extends State<HomeRoute> {
         '/register': (context) => RegisterUsers(),
         '/inicio': (context) => HomePage(),
         '/login': (context) => Login(),
+        '/profile': (context) => Profile(),
       },
     );
   }
