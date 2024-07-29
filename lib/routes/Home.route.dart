@@ -3,6 +3,7 @@ import 'package:tienda_flutter/screens/HomePage.dart';
 import 'package:tienda_flutter/screens/Login.dart';
 import 'package:tienda_flutter/screens/Profile.dart';
 import 'package:tienda_flutter/screens/RegisterUsers.dart';
+import 'package:tienda_flutter/screens/Users.dart';
 
 class HomeRoute extends StatefulWidget {
   const HomeRoute({super.key});
@@ -26,7 +27,11 @@ class _HomeRouteState extends State<HomeRoute> {
         '/inicio': (context) => HomePage(),
         '/login': (context) => Login(),
         '/profile': (context) => Profile(),
+        '/users': (context) => Users(),
       },
     );
   }
 }
+
+// https://docs.flutter.dev/cookbook/navigation/passing-data
+// https://www.youtube.com/watch?v=ad7buTVMUek&ab_channel=FernandoHerrera
